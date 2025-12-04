@@ -96,16 +96,27 @@ MyAcademicCopilot/
 - Docker support for easy deployment (full-stack)
 
 ## 🚀 Run MyAcademicCopilot on Your Machine (Docker)
+```bash
+# 1. Clone the repository
 git clone https://github.com/bengarusi/MyAcademicCopilot.git
 cd MyAcademicCopilot
+
+# 2. Set up the backend environment file
 cd backend
 cp env.example .env       # Windows PowerShell: copy env.example .env
 # Edit the .env file and insert your OPENAI_API_KEY
 cd ..
+
+# 3. Build and run the entire system (backend + frontend)
 docker compose up --build
 
+# 4. Access the application
+# Frontend:  http://localhost:5173
+# Backend:   http://localhost:8000
 
 # 5. Stop the system
 docker compose down
+```
+
 
 
