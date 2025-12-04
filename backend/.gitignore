@@ -1,0 +1,42 @@
+# ========== Virtual environment ==========
+venv/
+
+# ========== Environment variables ==========
+.env
+.env.*
+!*.env.example
+
+# ========== Python cache / compiled files ==========
+__pycache__/
+app/**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*$py.class
+
+# ========== RAG cache files (generated) ==========
+data/rag_cache.npz
+data/rag_cache_meta.json
+
+# ========== Logs ==========
+logs/
+*.log
+
+# ========== Packaging / build outputs ==========
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ========== IDE configs ==========
+.vscode/
+.idea/
+*.iml
+
+# ========== OS junk files ==========
+.DS_Store
+Thumbs.db
+
+# ========== Test / cache (למקרה שתוסיף בעתיד) ==========
+.pytest_cache/
+.mypy_cache/
