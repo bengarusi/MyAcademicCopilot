@@ -43,6 +43,8 @@ MyAcademicCopilot/
       App.jsx       Main app component
       api.js        Client for talking to the backend
 
+---
+
 ## 🔄 High-Level Flow
 
 1. **Document Ingestion**  
