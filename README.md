@@ -42,3 +42,54 @@ MyAcademicCopilot/
       components/   Chat UI components (header, sidebar, messages, input, etc.)
       App.jsx       Main app component
       api.js        Client for talking to the backend
+
+## 🔄 High-Level Flow
+
+1. **Document Ingestion**  
+   - User provides course materials (PDFs or text files).  
+   - Backend loads and parses the documents.  
+   - RAG component splits text into chunks and stores embeddings.
+
+2. **User Question**  
+   - User sends a natural-language query via the chat interface.  
+   - Frontend sends the request to the FastAPI backend.
+
+3. **RAG Retrieval**  
+   - Relevant document chunks are retrieved from the vector store.  
+   - Retrieved context is attached to the LLM prompt.
+
+4. **AI Agent Execution**  
+   - LangGraph selects the appropriate agent (answer, summary, explanation, etc.).  
+   - The LLM (via LiteLLM) generates a grounded answer.  
+
+5. **Response Construction**  
+   - Backend returns:
+     - The answer  
+     - The supporting citations (document passages used)  
+     - Metadata for debugging/observability (Langfuse trace IDs)
+
+6. **Frontend Display**  
+   - The React UI renders the conversation in a chat format.  
+   - Citations and context are shown alongside the assistant’s response.
+
+
+## 🧰 Tech Stack
+
+### Backend
+- **Python**, **FastAPI**
+- **LangChain**, **LangGraph**
+- **LiteLLM 
+- **ChromaDB** (in-memory vector store)
+- **Pydantic** & **Pydantic-Settings**
+- **Langfuse** for observability + tracing
+- **Uvicorn** ASGI server
+
+### Frontend
+- **React**
+- **Vite**
+
+### General
+- REST API communication (JSON)
+- Modular, clean architecture
+- Docker support for easy deployment (full-stack)
+
