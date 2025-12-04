@@ -80,7 +80,7 @@ MyAcademicCopilot/
 ### Backend
 - **Python**, **FastAPI**
 - **LangChain**, **LangGraph**
-- **LiteLLM 
+- **LiteLLM **
 - **ChromaDB** (in-memory vector store)
 - **Pydantic** & **Pydantic-Settings**
 - **Langfuse** for observability + tracing
