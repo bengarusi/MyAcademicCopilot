@@ -42,8 +42,8 @@ MyAcademicCopilot/
       components/   Chat UI components (header, sidebar, messages, input, etc.)
       App.jsx       Main app component
       api.js        Client for talking to the backend
+```
 
----
 
 ## 🔄 High-Level Flow
 
